@@ -1,0 +1,19 @@
+local httpService = game:GetService("HttpService")
+
+local data = {
+	    embeds = {{
+	        title = "aaa",
+	description = "Jimmy is a faggot"}} --// change the description to the description of message , description must be there , or else it wont work.
+	}
+	local json = httpService:JSONEncode(data)
+	local location = "https://discord.osyr.is/api/webhooks/[CENSORED]" --[[
+	dont forget to change the censored.. , you know why,
+	BTW discordapp.com is not allowed in roblox so you should use discord.osyr.is instead.
+	and dont forget to set the type
+	--]]
+	 
+	function send()
+	    httpService:PostAsync(location, json,Enum.HttpContentType.ApplicationJSON)          
+	end
+	 
+  send()
